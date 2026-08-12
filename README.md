@@ -1,6 +1,6 @@
 # rPlayer
 
-rPlayer is a video and image application built on the public rasterm C++ API. It owns all media concerns:
+rPlayer is a video and image application built on the public rasterm C++ API. It owns all multimedia concerns:
 
 - OpenCV image/video decoding and scaling
 - FFmpeg audio demuxing, decoding, and resampling
@@ -9,8 +9,10 @@ rPlayer is a video and image application built on the public rasterm C++ API. It
 - Adaptive playback resolution
 - CSV performance metrics
 
-Download & move the project to rasterm's `apps/rPlayer` directory. You can build the project with `rPlayer.vcxproj` via vs2022 or `build-rplayer.ps1` via cmake, and its output is:
+It does not include or reach into rasterm's private `src/` modules. The Visual Studio project is `rPlayer.vcxproj`, and its Release output is:
 
 ```text
-apps/rPlayer/build
+apps/rPlayer/build/Release/rPlayer.exe
 ```
+
+This directory is an application consumer and is not installed with `rasterm::rasterm`.

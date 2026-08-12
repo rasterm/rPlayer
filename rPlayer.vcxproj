@@ -40,8 +40,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <TargetName>rPlayer</TargetName>
-    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\apps\rPlayer\</OutDir>
-    <IntDir>$(SolutionDir)build\$(Platform)\int\$(Configuration)\rPlayer\</IntDir>
+    <OutDir>$(ProjectDir)build\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)build\$(Platform)\int\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Label="Vcpkg">
     <VcpkgUseStatic>false</VcpkgUseStatic>
