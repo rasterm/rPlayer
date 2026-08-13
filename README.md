@@ -9,10 +9,8 @@ rPlayer is a video and image application built on the public rasterm C++ API. It
 - Adaptive playback resolution
 - CSV performance metrics
 
-It does not include or reach into rasterm's private `src/` modules. The Visual Studio project is `rPlayer.vcxproj`, and its Release output is:
+Download and move the rasterm.sln to the root of `rasterm` directory, and rPlayer source code to `apps/rPlayer` directory. You can build with vs2022 or cmake, the output will be at:
 
 ```text
-apps/rPlayer/build/Release/rPlayer.exe
+apps/rPlayer/build/
 ```
-
-This directory is an application consumer and is not installed with `rasterm::rasterm`.
