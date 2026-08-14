@@ -71,8 +71,14 @@ bool renderImageFile(const std::string& path, const ImageOptions& options)
     }
 
     engine.clear();
-    engine.renderFrame(canvas.ptr<std::uint8_t>(), canvas.cols, canvas.rows,
-                       static_cast<std::ptrdiff_t>(canvas.step), PixelFormat::BGR24);
+    const RenderStats result = engine.renderFrame(
+        canvas.ptr<std::uint8_t>(), canvas.cols, canvas.rows,
+        static_cast<std::ptrdiff_t>(canvas.step), PixelFormat::BGR24);
+    if (!result.rendered) {
+        const Status status = engine.status();
+        std::cerr << "rasterm failed to render the image: " << status.message << '\n';
+        return false;
+    }
     return true;
 }
 
